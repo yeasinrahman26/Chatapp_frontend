@@ -1,4 +1,4 @@
-import ChatContainer from "../../components/Sidebar/ChatContainer";
+import ChatContainer from "../../components/MessageContainer/ChatContainer";
 import NoChatSelected from "../../components/Sidebar/noChatSelected";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import { useChatStore } from "../../store/useChatStore";
