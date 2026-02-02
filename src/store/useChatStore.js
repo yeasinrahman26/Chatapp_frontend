@@ -50,14 +50,15 @@ export const useChatStore = create((set, get) => ({
 
   subscribeToMessages: () => {
     const { selectedUser } = get();
-    if (selectedUser) return;
+    if (!selectedUser) return;
 
     const socket = useAuthStore.getState().socket;
-
+    
+// todo:optimize this one later
     socket.on("newMessage", (newMessage) => {
       set({
         messages: [...get().messages, newMessage],
-      });
+      });newMessage;
     });
   },
 
