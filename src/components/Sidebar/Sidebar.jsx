@@ -48,13 +48,13 @@ const Sidebar = () => {
           </span>
         </div>
       </div>
-      <div className="overflow-y-auto w-full px-2 py-3">
+      <div className="overflow-y-auto w-full  px-2 py-3">
         {filteredUsers.map((user) => (
           <button
             key={user._id}
             onClick={() => setSelectedUser(user)}
-            className={`w-full flex items-center gap-3 p-3 my-2 
-                rounded-2xl shadow-sm
+            className={`w-full flex items-center gap-3   p-3 my-2 
+                rounded-2xl shadow-xl border border-base-300 cursor-pointer
               transition-all duration-200 ease-in-out
               ${
                 selectedUser?._id === user._id
@@ -68,7 +68,7 @@ const Sidebar = () => {
               <img
                 src={user.avatar || "/avatar.png"}
                 alt={user.name}
-                className="size-12 object-cover rounded-full"
+                className="size-10 object-cover rounded-full"
               />
               {onlineUsers.includes(user._id) && (
                 <span
