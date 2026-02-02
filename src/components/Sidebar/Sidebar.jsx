@@ -10,11 +10,17 @@ const Sidebar = () => {
 
   const { onlineUsers } = useAuthStore();
 
+  const showOnline = useChatStore((state) => state.showOnline);
+  const setShowOnline = useChatStore((state) => state.setShowOnline);
   useEffect(() => {
     getUsers();
   }, [getUsers]);
 
   if (isUserLoading) return <SidebarSkeleton />;
+
+  const filteredUsers = showOnline
+    ? users.filter((user) => onlineUsers.includes(user._id))
+    : users;
 
   return (
     <aside
@@ -26,9 +32,24 @@ const Sidebar = () => {
           <Users className="size-6" />
           <span className="font-medium hidden lg:block">Contacts</span>
         </div>
+        {/* todo */}
+        <div className="mt-3 hidden lg:flex items-center gap-2">
+          <label className="cursor-pointer flex items-center gap-2">
+            <input
+              type="checkbox"
+              checked={showOnline}
+              onChange={(e) => setShowOnline(e.target.checked)}
+              className="checkbox checkbox-sm"
+            />
+            <span className="text-sm">Show online only</span>
+          </label>
+          <span className="text-xs text-zinc-400">
+            ({onlineUsers.length - 1}) online
+          </span>
+        </div>
       </div>
       <div className="overflow-y-auto w-full px-2 py-3">
-        {users.map((user) => (
+        {filteredUsers.map((user) => (
           <button
             key={user._id}
             onClick={() => setSelectedUser(user)}
@@ -65,6 +86,11 @@ const Sidebar = () => {
             </div>
           </button>
         ))}
+        {filteredUsers.length === 0 && (
+          <p className="text-center text-zinc-500 mt-10">
+            No users {showOnline ? "online" : "available"}.
+          </p>
+        )}
       </div>
     </aside>
   );
