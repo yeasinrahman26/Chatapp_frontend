@@ -1,13 +1,65 @@
-# React + Vite
+# Vibrate – Real Time Chat Application 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Vibrate** is a modern real-time chat application that allows users to communicate instantly with secure authentication and live online/offline status.
 
-Currently, two official plugins are available:
+🔴 **Live Demo:**  
+https://vibrate-1d8a.onrender.com/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🖥 **Backend Repository:**  
+https://github.com/yeasinrahman26/Chatapp_backend
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# Chatapp_frontend" 
+## 🌟 Features
+
+- 🔐 Secure User Authentication (Login / Signup)
+- 💬 One-to-One Real Time Chat
+- 🟢 Live Online / Offline Status Indicator
+- ⚡ Instant Messaging using Socket.io
+- 🔑 JWT Token Based Authentication
+- 📡 REST API Architecture
+- 🎨 Modern Responsive UI
+- 📱 Mobile Friendly Design
+
+---
+
+## 🖼 Screenshots
+
+### Login Page
+![Login Page](https://i.ibb.co.com/DHWbfXqC/Screenshot-2026-02-05-011059.png)
+
+### Home Page
+![Home Page](https://i.ibb.co.com/gbT8PBK2/Screenshot-2026-02-05-011210.png)
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+
+- React.js
+- Vite
+- Tailwind CSS
+- DaisyUI
+- Zustand (State Management)
+- Axios
+- React Router DOM
+- Socket.io Client
+- React Hot Toast
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
+- Socket.io
+- JWT Authentication
+- Bcrypt.js
+- Cloudinary
+- Cookie Parser
+- CORS
+
+---
+
+## 📂 Project Structure
+
